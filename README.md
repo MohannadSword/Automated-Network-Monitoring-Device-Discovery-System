@@ -218,11 +218,11 @@ These are potential future improvements.
 
 ### Phase 2 — Network Discovery
 
-* [ ] Automatically scan the local network
-* [ ] Detect connected devices
-* [ ] Retrieve IP and MAC addresses
-* [ ] Identify device vendors
-* [ ] Automatically add discovered devices to the database
+* [x] Automatically scan the local network
+* [x] Detect connected devices
+* [x] Retrieve IP and MAC addresses
+* [x] Identify device vendors
+* [x] Automatically add discovered devices to the database
 
 ### Phase 3 — Device Classification
 
