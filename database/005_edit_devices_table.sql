@@ -1,0 +1,1 @@
+ALTER TABLE devices ALTER COLUMN hostname SET DEFAULT "device";   

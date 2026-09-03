@@ -33,11 +33,18 @@ def discover_devices(network=None):
 
     command = ["nmap", "-sn", "-PR", network]
 
-    result = subprocess.run(
-        command,
-        capture_output=True,
-        text=True
-    )
+    try:
+        result = subprocess.run(
+            command,
+            capture_output=True,
+            text=True
+        )
+    except FileNotFoundError:
+        raise RuntimeError("nmap not found: please install 'nmap' and ensure it is on PATH")
+
+    if result.returncode != 0:
+        # surface nmap errors clearly
+        raise RuntimeError(f"nmap error: {result.stderr.strip()}")
 
     devices = []
     current_device = None
